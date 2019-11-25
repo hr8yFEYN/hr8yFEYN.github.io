@@ -150,7 +150,7 @@ ul.page_list .date {
   font-weight: 400;
 }
 ul.page_list .title {
-  font-weight: 300;
+  font-weight: normal;
   font-size: 110%;
 }
 ul.page_list li p {
