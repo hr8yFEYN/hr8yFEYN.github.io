@@ -4,37 +4,38 @@ html {
 body {
   font-family: Helvetica Neue, Helvetica, ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, ＭＳ\ Ｐゴシック, MS PGothic, sans-serif;
   background:transparent;
-  color:#555;
-  font-weight: 400;
+  color:black;
   -webkit-font-smoothing: antialiased;
 }
 header {
-  margin-bottom: 1.5em;
+  padding: 0.5em 0;
+  margin-bottom: 1em;
+  display: grid;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 400;
+  font-weight: bold;
   clear: both;
   color: black;
   margin: 1em 0 0.6em 0;
 }
 h1 {
-  font-size: 220%;
+  font-size: 200%;
 }
 h1.entry-title {
   font-size: 230%;
   margin: 0;
 }
 h2 {
-  font-size: 170%;
+  font-size: 160%;
 }
 h3  {
-  font-size: 150%;
+  font-size: 140%;
 }
 h4 {
-  font-size: 130%;
+  font-size: 125%;
 }
 h5 {
-  font-size: 120%;
+  font-size: 110%;
 }
 h6 {
   font-size: 105%;
@@ -65,21 +66,28 @@ hr {
 }
 .clearfix:after { clear: both }
 .clearfix { zoom:1 }
-#site_title {
-  padding: 0.5em;
-  text-align: center;
-  background-color: rgb(247,247,247);
+.sepbar {
+    color: rgb(220,220,220)
 }
-#site_title a:link {
-  color: rgb(170,170,170);
+#site_menu {
+  /* color: rgb(224,224,224); */
+  color: black;
+  text-align: right;
+  vertical-align: center;
+  font-size: 85%;
 }
-#site_title a:visited {
-  color: rgb(170,170,170);
+#site_menu a:link {
+  /* color: rgb(224,224,224); */
+  color: black;
 }
-#site_subtitle span {
-  font-size: 90%;
-  color: #ccc;
-  font-weight: 300;
+#site_menu a:visited {
+  color: black;
+}
+#site_menu a:active {
+  color: rgb(0,128,255);
+}
+#site_menu a:hover {
+  color: rgb(0,128,255);
 }
 #key_image img {
   width: 100%;
@@ -100,12 +108,16 @@ hr {
 }
 .entry-header {
   margin-top: 2em 0 0 0;
+  padding: 0;
 }
 .entry-header span.entry-date {
-  color: rgb(160,160,160)
+  color: gray;
+  font-weight: bold;
+  font-size: 120%;
+
 }
 .entry-header h1.entry-title {
-  margin-top: 0.1em;
+  font-weight: bold;
 }
 .entry-content {
   margin-bottom: 1.5em;
@@ -116,8 +128,12 @@ hr {
   background-color: rgb(250,250,250)
 }
 
+.entry_content table tbody, tr, th, td {
+    border: solid 1px gray;
+}
 .entry-content table {
   margin-left: 2em;
+  border-collapse: collapse;
 }
 .entry-content table tbody tr th {
   padding: 0.25em 0.5em;
@@ -145,23 +161,28 @@ ul.page_list li::after {
   display: block;
 }
 ul.page_list .date {
-  color: black;
+  color: gray;
   font-size: 85%;
-  font-weight: 400;
+  font-weight: bold
 }
 ul.page_list .title {
-  font-weight: normal;
+  font-weight: bold;
   font-size: 110%;
 }
 ul.page_list li p {
   margin: 0;
   font-size: 90%;
-  color: rgb(60,60,60);
 }
 nav.pagination {
   text-align: center;
   margin-bottom: 1.5em;
   color: black;
+  font-size: 90%;
+}
+nav.pagination .date {
+    font-size:90%;
+    color: gray;
+    font-weight: bold;
 }
 div.addr a:link {
   color:#999;
@@ -173,10 +194,6 @@ div.addr a:link {
     font-size: 18px;
     width: 740px;
     margin: 0 auto 1em auto;
-    font-weight: 400;
-  }
-  #site_title {
-    font-size: 110%;
   }
   .travel_info_item_with_image {
     display: grid;
@@ -213,7 +230,6 @@ div.addr a:link {
     font-size: 18px;
     width: 100%;
     margin: 0 auto 1em auto;
-    font-weight: 400;
   }
   article {
     width: 92%;
@@ -223,8 +239,8 @@ div.addr a:link {
     width: 92%;
     margin: 0 auto 1em auto;
   }
-  #site_title {
-    font-size: 100%;
+  #site_menu {
+      width: 92%;
   }
   .travel_info_item_with_image .image img {
     width: 100%;
@@ -263,7 +279,7 @@ div.addr a:link {
     font-size: 100%;
   }
   ul.page_list .title {
-    font-weight: 300;
+    font-weight: bold;
     font-size: 120%;
   }
   .google_maps {
@@ -287,4 +303,13 @@ div.addr a:link {
 }
 .youtubeVideo + * {
     margin-top: 2em;
+}
+.photos {
+    width: 95%;
+    text-align: center;
+}
+
+.photos img {
+    width: 17%;
+    margin: 0.1em;
 }
